@@ -60,7 +60,9 @@ public class Demo {
     public void addScienceBook(){
         Science science1 = new Science();
 
-        System.out.println("Enter details for the Science book:");
+        System.out.println("---------------------------------------");
+        System.out.println("| Enter details for the Science book: |");
+        System.out.println("---------------------------------------");
         System.out.print("Author Name: ");
         String author = sc.next();
         System.out.print("Year of publishing: ");
