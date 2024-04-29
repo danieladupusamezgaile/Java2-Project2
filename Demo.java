@@ -9,6 +9,7 @@ public class Demo {
     List<Novels> novelsBooks = new ArrayList<>();
 
     public void menu(){
+        sc.useDelimiter("\n");
         int option;
         System.out.println("----------------------------------");
         System.out.println("| Library Management System Menu |");
@@ -20,20 +21,24 @@ public class Demo {
         System.out.println("| 5. Exit                        |");
         System.out.println("----------------------------------");
         System.out.println("Enter your choise: ");
+        System.out.print("-->");
 
         while (!sc.hasNextInt()) { // check if integer value entered
             System.out.println("Not a valid option!");
-            System.out.print("Enter your choise: ");
+            System.out.println("Enter your choise: ");
+            System.out.print("-->");
             sc.next();
         }
         option = sc.nextInt();
         while(option < 1 || option > 5){
             System.out.println("Please, choose from offered options");
-            System.out.print("Enter your choise: ");
+            System.out.println("Enter your choise: ");
+            System.out.print("-->");
 
             while (!sc.hasNextInt()) { // check if integer value entered
                 System.out.println("Not a valid option!");
-                System.out.print("Enter your choise: ");
+                System.out.println("Enter your choise: ");
+                System.out.print("-->");
                 sc.next();
             }
             option = sc.nextInt();
@@ -65,7 +70,9 @@ public class Demo {
         System.out.println("---------------------------------------");
         System.out.print("Author Name: ");
         String author = sc.next();
+        System.out.println(author);
         System.out.print("Year of publishing: ");
+
         while (!sc.hasNextInt()) {
             System.out.println("Not a valid year");
             System.out.print("Year of publishing:");
@@ -241,54 +248,5 @@ public class Demo {
 
         Demo demo = new Demo();
         demo.menu();
-        // Scanner sc = new Scanner(System.in);
-
-        // // Science
-        // Science science1 = new Science();
-        // science1.setAuthor("Author name");
-        // science1.setTitle("Book Title");
-        // science1.setYear("1999");
-        // science1.setPrice("20.50");
-        // scienceBooks.add(science1);
-
-        // Science science2 = new Science();
-        // science2.setAuthor("Author name2");
-        // science2.setTitle("Book Title2");
-        // science2.setYear("1977");
-        // science2.setPrice("31");
-        // scienceBooks.add(science2);
-
-        // // Technology
-        // Technology tech1 = new Technology();
-        // tech1.setAuthor("Author name");
-        // tech1.setTitle("Book Title");
-        // tech1.setYear("1999");
-        // tech1.setPrice("20.50");
-        // technologyBooks.add(tech1);
-
-        // Technology tech2 = new Technology();
-        // tech2.setAuthor("Author name2");
-        // tech2.setTitle("Book Title2");
-        // tech2.setYear("1977");
-        // tech2.setPrice("31");
-        // technologyBooks.add(tech2);
-
-        // // Novels
-        // Novels novel1 = new Novels();
-        // novel1.setAuthor("Author name");
-        // novel1.setTitle("Book Title");
-        // novel1.setYear("1999");
-        // novel1.setPrice("20.50");
-        // novelsBooks.add(novel1);
-
-        // Novels novel2 = new Novels();
-        // novel2.setAuthor("Author name2");
-        // novel2.setTitle("Book Title2");
-        // novel2.setYear("1977");
-        // novel2.setPrice("31");
-        // novelsBooks.add(novel2);
-
-        // Library library = new Library(scienceBooks, technologyBooks, novelsBooks);
-        // library.listBooks();
     }
 }
