@@ -70,7 +70,6 @@ public class Demo {
         System.out.println("---------------------------------------");
         System.out.print("Author Name: ");
         String author = sc.next();
-        System.out.println(author);
         System.out.print("Year of publishing: ");
 
         while (!sc.hasNextInt()) {
@@ -125,7 +124,9 @@ public class Demo {
     public void addTechnologyBook(){
         Technology technology = new Technology();
 
-        System.out.println("Enter details for the Science book:");
+        System.out.println("------------------------------------------");
+        System.out.println("| Enter details for the Technology book: |");
+        System.out.println("------------------------------------------");
         System.out.print("Author Name: ");
         String author = sc.next();
         System.out.print("Year of publishing: ");
@@ -181,7 +182,9 @@ public class Demo {
     public void addNovelsBook(){
         Novels novels = new Novels();
 
-        System.out.println("Enter details for the Science book:");
+        System.out.println("--------------------------------------");
+        System.out.println("| Enter details for the Novels book: |");
+        System.out.println("--------------------------------------");
         System.out.print("Author Name: ");
         String author = sc.next();
         System.out.print("Year of publishing: ");
